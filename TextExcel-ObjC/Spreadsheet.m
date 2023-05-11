@@ -8,17 +8,36 @@
 #import "Spreadsheet.h"
 #import "EmptyCell.h"
 #import "Cell.h"
-// Defines the main spreadsheet class that contains the 2D array
+#import "SpreadsheetLocation.h"
+#import <AppKit/AppKit.h>
 
+@interface NSString (Split)
+
+- (NSArray<NSString *> *)componentsSeparatedByStringAndLimit:(int)limit;
+@end
+@implementation NSString (Split)
+
+
+- (NSArray<NSString *> *)componentsSeparatedByStringAndLimit:(int)limit{
+    NSMutableArray *mutableArray = [NSMutableArray array];
+    NSArray *split = [self componentsSeparatedByString:@" "];
+    for (int i = 0; i < limit; ++i) {
+        if (i < [split count])
+            [mutableArray addObject:split[(NSUInteger) i]];
+    }
+    return [mutableArray copy];
+}
+@end
+// Defines the main spreadsheet class that contains the 2D array
 @implementation Spreadsheet
 
 - (instancetype)init{
     self = [super init];
     if(self){
         _arrayEmpty2D = [NSMutableArray array];
-        for(int rows =0; rows< [self getRows]; ++rows){
+        for(int rows =0; rows< [self getRows]; rows++){
             NSMutableArray<id<Cell>> *row = [NSMutableArray array];
-            for(int cols =0; cols< [self getCols]; ++cols){
+            for(int cols =0; cols< [self getCols]; cols++){
                 [row addObject:[[EmptyCell alloc]init]];
             }
             [self.arrayEmpty2D addObject:row];
@@ -44,14 +63,14 @@
     NSString* top = @"   |";
     NSString* bottom = @"";
     for(int i =0; i < [self getCols]; ++i){
-        top = [top stringByAppendingFormat:@"%c %7s |",(char)(start+i)," "];
+        top = [top stringByAppendingFormat:@"%c %8s |",(char)(start+i)," "];
     }
-    for(int i=0; i<[self getRows]; ++i){
+    for(int i=0; i<[self getRows]; i++){
         bottom = (i < 9)?
         [bottom stringByAppendingFormat:@"%d |",(i+1)]:
         [bottom stringByAppendingFormat:@"%d|",(i+1)];
         for(int j =0; j<[self getCols]; ++j){
-            id<Cell> element = self.arrayEmpty2D[i][j];
+            id<Cell> element = self.arrayEmpty2D[(NSUInteger) i][(NSUInteger) j];
             bottom = [bottom stringByAppendingFormat:@"%@ |",
             [element abbreviatedCellText]];
         }
@@ -66,7 +85,17 @@
     return 20;
 }
 
-- (nonnull NSString *)processCommand:(nonnull NSString *)command { 
+- (nonnull NSString *)processCommand:(nonnull NSString *)command {
+    NSArray<NSString *> *split = [command componentsSeparatedByStringAndLimit:3];
+
+    if([split[0] containsString:@"QUIT"])
+        [[NSApplication sharedApplication] terminate:nil];
+    else{
+        
+    }
+
+    fprintf(stdout, "Entered Command: %s \n",[split[0] UTF8String]);
+    fprintf(stdout, "%s\n",[[self getGridText] UTF8String] );
     return nil;
 }
 

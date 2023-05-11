@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4203FDA02A0CB85C00D4CCE9 /* SpreadsheetLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4203FD9F2A0CB85C00D4CCE9 /* SpreadsheetLocation.m */; };
 		42DC45862A0C828B0098D8A5 /* EmptyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 42DC45852A0C828B0098D8A5 /* EmptyCell.m */; };
 		42DC45892A0C85E20098D8A5 /* TextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 42DC45882A0C85E20098D8A5 /* TextCell.m */; };
 		42DC45942A0C962A0098D8A5 /* Spreadsheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 42DC45932A0C962A0098D8A5 /* Spreadsheet.m */; };
@@ -26,6 +27,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4203FD9E2A0CB85C00D4CCE9 /* SpreadsheetLocation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpreadsheetLocation.h; sourceTree = "<group>"; };
+		4203FD9F2A0CB85C00D4CCE9 /* SpreadsheetLocation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpreadsheetLocation.m; sourceTree = "<group>"; };
 		42DC45812A0C81650098D8A5 /* Cell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Cell.h; sourceTree = "<group>"; };
 		42DC45842A0C828B0098D8A5 /* EmptyCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmptyCell.h; sourceTree = "<group>"; };
 		42DC45852A0C828B0098D8A5 /* EmptyCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmptyCell.m; sourceTree = "<group>"; };
@@ -75,6 +78,8 @@
 				42DC458E2A0C895C0098D8A5 /* Location.h */,
 				42DC45922A0C962A0098D8A5 /* Spreadsheet.h */,
 				42DC45932A0C962A0098D8A5 /* Spreadsheet.m */,
+				4203FD9E2A0CB85C00D4CCE9 /* SpreadsheetLocation.h */,
+				4203FD9F2A0CB85C00D4CCE9 /* SpreadsheetLocation.m */,
 			);
 			path = "TextExcel-ObjC";
 			sourceTree = "<group>";
@@ -139,6 +144,7 @@
 			files = (
 				42DC45942A0C962A0098D8A5 /* Spreadsheet.m in Sources */,
 				42DC45892A0C85E20098D8A5 /* TextCell.m in Sources */,
+				4203FDA02A0CB85C00D4CCE9 /* SpreadsheetLocation.m in Sources */,
 				AABCC1642BEC00372D6F6780 /* main.m in Sources */,
 				42DC45862A0C828B0098D8A5 /* EmptyCell.m in Sources */,
 			);

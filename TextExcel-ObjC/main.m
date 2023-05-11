@@ -18,10 +18,9 @@ int main(int argc, const char * argv[]) {
         while (TRUE) {
             NSString* inputString = [[NSString alloc] initWithData:[handle availableData] encoding:NSUTF8StringEncoding];
 //            Strip the carriage return out of the input (its evil)
-            inputString = [inputString stringByTrimmingCharactersInSet:[NSCharacterSet newlineCharacterSet]];
-//            Test print using fprintf. Cast to UTF8 String
-            fprintf(stdout, "Entered Command: %s \n",[inputString UTF8String]);
-            fprintf(stdout, "%s\n",[[allocated_sheet getGridText] UTF8String] );
+            inputString = [[inputString stringByTrimmingCharactersInSet:[NSCharacterSet newlineCharacterSet]] uppercaseString];
+            [allocated_sheet processCommand:inputString];
+
         }
     }
     return 0;
