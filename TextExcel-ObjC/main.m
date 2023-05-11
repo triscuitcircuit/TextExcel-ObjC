@@ -7,9 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Spreadsheet.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
+        Spreadsheet* allocated_sheet = [[Spreadsheet alloc]init];
 //        Read in from the standard input
 //        Standard Input is a file (everything is a file with Unix)
         NSFileHandle *handle = [NSFileHandle fileHandleWithStandardInput];
@@ -19,6 +21,7 @@ int main(int argc, const char * argv[]) {
             inputString = [inputString stringByTrimmingCharactersInSet:[NSCharacterSet newlineCharacterSet]];
 //            Test print using fprintf. Cast to UTF8 String
             fprintf(stdout, "Entered Command: %s \n",[inputString UTF8String]);
+            fprintf(stdout, "%s\n",[[allocated_sheet getGridText] UTF8String] );
         }
     }
     return 0;

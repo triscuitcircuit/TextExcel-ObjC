@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 -(NSString*) processCommand:(NSString*) command;
 -(int) getRows;
 -(int) getCols;
--(Cell*) getCell(Location*):loc;
+-(id<Cell>) getCell:(id<Location>) loc;
 -(NSString*) getGridText;
 
 @end

@@ -8,6 +8,14 @@
 #import "EmptyCell.h"
 
 @implementation EmptyCell
+- (instancetype) init{
+    self = [super init];
+    if(self){
+        
+    }
+    return self;
+}
+
 - (nonnull NSString *)abbreviatedCellText {
     return [NSString stringWithFormat:@"%10s",""];
 }

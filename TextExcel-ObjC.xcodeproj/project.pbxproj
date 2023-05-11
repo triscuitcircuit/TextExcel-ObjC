@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		42DC45862A0C828B0098D8A5 /* EmptyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 42DC45852A0C828B0098D8A5 /* EmptyCell.m */; };
 		42DC45892A0C85E20098D8A5 /* TextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 42DC45882A0C85E20098D8A5 /* TextCell.m */; };
+		42DC45942A0C962A0098D8A5 /* Spreadsheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 42DC45932A0C962A0098D8A5 /* Spreadsheet.m */; };
 		AABCC1642BEC00372D6F6780 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AABCC322FAEA56093C7AEC6A /* main.m */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +34,9 @@
 		42DC458A2A0C86DA0098D8A5 /* NSComparisonMethods.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSComparisonMethods.h; sourceTree = "<group>"; };
 		42DC458B2A0C886B0098D8A5 /* Grid.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Grid.h; sourceTree = "<group>"; };
 		42DC458E2A0C895C0098D8A5 /* Location.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
+		42DC45912A0C911B0098D8A5 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		42DC45922A0C962A0098D8A5 /* Spreadsheet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Spreadsheet.h; sourceTree = "<group>"; };
+		42DC45932A0C962A0098D8A5 /* Spreadsheet.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Spreadsheet.m; sourceTree = "<group>"; };
 		AABCC322FAEA56093C7AEC6A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AABCCAB361F29F904CC1EAD6 /* TextExcel-ObjC */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "TextExcel-ObjC"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -51,6 +55,7 @@
 		AABCC131AF1E51333CE7F7A9 = {
 			isa = PBXGroup;
 			children = (
+				42DC45912A0C911B0098D8A5 /* README.md */,
 				AABCC61D166E86FC97E84D10 /* Products */,
 				AABCC2C23F1A24B3707FFF1E /* TextExcel-ObjC */,
 			);
@@ -68,6 +73,8 @@
 				42DC458A2A0C86DA0098D8A5 /* NSComparisonMethods.h */,
 				42DC458B2A0C886B0098D8A5 /* Grid.h */,
 				42DC458E2A0C895C0098D8A5 /* Location.h */,
+				42DC45922A0C962A0098D8A5 /* Spreadsheet.h */,
+				42DC45932A0C962A0098D8A5 /* Spreadsheet.m */,
 			);
 			path = "TextExcel-ObjC";
 			sourceTree = "<group>";
@@ -130,6 +137,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42DC45942A0C962A0098D8A5 /* Spreadsheet.m in Sources */,
 				42DC45892A0C85E20098D8A5 /* TextCell.m in Sources */,
 				AABCC1642BEC00372D6F6780 /* main.m in Sources */,
 				42DC45862A0C828B0098D8A5 /* EmptyCell.m in Sources */,
