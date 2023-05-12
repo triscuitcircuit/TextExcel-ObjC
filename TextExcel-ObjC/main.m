@@ -12,13 +12,6 @@
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        // TODO: Unit tests
-        simple_pqueue* test = [[simple_pqueue alloc] init];
-        [test enqueue:@"test" withPriority:1];
-        [test enqueue:@"test2" withPriority:2];
-        [test enqueue:@"test3" withPriority:-2];
-        NSLog(@"%ld",(long)[test size]);
-        NSLog(@"%@",[test dequeue]);
 
 
         Spreadsheet* allocated_sheet = [[Spreadsheet alloc]init];

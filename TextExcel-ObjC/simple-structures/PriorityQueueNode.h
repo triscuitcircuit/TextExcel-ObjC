@@ -9,7 +9,7 @@
 
 @property(nonatomic, strong) id object;
 @property (nonatomic, assign) NSInteger priority;
-@property (nonatomic, strong)PriorityQueueNode *next;
+@property (nonatomic, strong) PriorityQueueNode *next;
 
 -(instancetype)initWithType:(id)object priority:(NSInteger)priority;
 @end

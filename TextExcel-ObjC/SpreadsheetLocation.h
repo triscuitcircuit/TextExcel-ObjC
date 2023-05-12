@@ -10,7 +10,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface SpreadsheetLocation : NSObject<Location>
-
+@property (assign) int row,col;
+-(instancetype) init: (NSString*)cellname;
 @end
 
 NS_ASSUME_NONNULL_END

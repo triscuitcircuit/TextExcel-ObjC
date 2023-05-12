@@ -9,6 +9,7 @@
 #import "EmptyCell.h"
 #import "Cell.h"
 #import "SpreadsheetLocation.h"
+#import "TextCell.h"
 #import <AppKit/AppKit.h>
 
 @interface NSString (Split)
@@ -47,7 +48,7 @@
 }
 
 - (nonnull id<Cell>)getCell:(nonnull id<Location>)loc { 
-    return nil;
+    return _arrayEmpty2D[loc.getRow][loc.getCol];
 }
 
 - (int)getCols {
@@ -91,12 +92,20 @@
     if([split[0] containsString:@"QUIT"])
         [[NSApplication sharedApplication] terminate:nil];
     else{
-        
+        SpreadsheetLocation* loc = [[SpreadsheetLocation alloc]init:split[0]];
+        NSLog(@"row: %d column: %d", loc.row, loc.col);
+        if([split count] == 1){
+            NSLog(@"Cell: %@", [[self getCell:loc] fullCellText]);
+        }
+        if([split count] ==3 && [split[1] isEqualToString:@"="])
+            fprintf(stdout, "%s\n",[[self changeValueAtLocation:loc Value:split[2]] UTF8String]);
     }
 
-    fprintf(stdout, "Entered Command: %s \n",[split[0] UTF8String]);
-    fprintf(stdout, "%s\n",[[self getGridText] UTF8String] );
     return nil;
+}
+-(NSString*)changeValueAtLocation:(id<Location>)loc Value:(NSString*)value{
+    _arrayEmpty2D[loc.getRow][loc.getCol] = [[TextCell alloc] initWithString:value];
+    return [self getGridText];
 }
 
 @end

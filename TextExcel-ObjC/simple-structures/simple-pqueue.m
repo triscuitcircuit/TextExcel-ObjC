@@ -9,28 +9,27 @@
 #import "PriorityQueueNode.h"
 
 @implementation simple_pqueue
--(BOOL) insert{
-    return TRUE;
-}
 
 - (instancetype)init {
     self = [super init];
-    if(self)
+    if(self){
+        _size = 0;
         _front = nil;
+    }
     return self;
 }
 
 - (BOOL)isEmpty {
-    return TRUE;
+    return (_size >0) ? FALSE: TRUE;
 }
 
 - (NSInteger)size {
-    return 0;
+    return _size;
 }
 
 - (nonnull id<NSComparisonMethods,NSObject>)dequeue {
     if(_front){
-        self.size -=1; 
+        _size -= 1;
         id object = _front.object;
         _front = _front.next;
         return object;
@@ -38,12 +37,9 @@
     return nil;
 }
 
-
-
-
 - (BOOL)enqueue:(nonnull id<NSObject>)object withPriority:(NSInteger)priority {
     _front = [self enqueueNode:_front withObject:object priority:priority];
-    self.size += 1;
+    _size += 1;
     return TRUE;
 }
 -(PriorityQueueNode*)enqueueNode:(PriorityQueueNode*)node withObject:(id<NSObject>)object priority:(NSInteger)priority{

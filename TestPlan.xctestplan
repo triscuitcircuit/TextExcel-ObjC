@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "2563B7BA-7E8A-4CB1-9952-04B8ABC334DF",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "testTimeoutsEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:TextExcel-ObjC.xcodeproj",
+        "identifier" : "42CA2F8F2A0DF47D001FD656",
+        "name" : "UnitTests"
+      }
+    }
+  ],
+  "version" : 1
+}

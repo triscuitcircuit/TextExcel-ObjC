@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface TextCell : NSObject<Cell, NSComparisonMethods>
 @property (readonly) NSString *storage;
-
+-(instancetype) initWithString: (NSString*)value;
 
 @end
 

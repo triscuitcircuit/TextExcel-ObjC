@@ -9,12 +9,23 @@
 
 @implementation SpreadsheetLocation
 
+
+
 - (int)getCol {
-    return (int)nil;
+    return _col;
 }
 
 - (int)getRow {
-    return (int)nil;
+    return _row;
+}
+
+- (nonnull instancetype)init:(nonnull NSString *)cellname {
+    self = [super init];
+    if(self){
+        _col = (int)[cellname characterAtIndex:0]-65;
+        _row = [[cellname substringFromIndex:1]intValue]-1;
+    }
+    return self;
 }
 
 @end
