@@ -8,10 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		4203FDA02A0CB85C00D4CCE9 /* SpreadsheetLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4203FD9F2A0CB85C00D4CCE9 /* SpreadsheetLocation.m */; };
+		4203FDA42A0D251C00D4CCE9 /* simple-pqueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 4203FDA32A0D251C00D4CCE9 /* simple-pqueue.m */; };
 		42DC45862A0C828B0098D8A5 /* EmptyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 42DC45852A0C828B0098D8A5 /* EmptyCell.m */; };
 		42DC45892A0C85E20098D8A5 /* TextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 42DC45882A0C85E20098D8A5 /* TextCell.m */; };
 		42DC45942A0C962A0098D8A5 /* Spreadsheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 42DC45932A0C962A0098D8A5 /* Spreadsheet.m */; };
 		AABCC1642BEC00372D6F6780 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AABCC322FAEA56093C7AEC6A /* main.m */; };
+		AABCC3D1DD4BA2983F1D7592 /* PriorityQueueNode.m in Sources */ = {isa = PBXBuildFile; fileRef = AABCC55799D6A762C07D630E /* PriorityQueueNode.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,6 +31,8 @@
 /* Begin PBXFileReference section */
 		4203FD9E2A0CB85C00D4CCE9 /* SpreadsheetLocation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpreadsheetLocation.h; sourceTree = "<group>"; };
 		4203FD9F2A0CB85C00D4CCE9 /* SpreadsheetLocation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpreadsheetLocation.m; sourceTree = "<group>"; };
+		4203FDA22A0D251C00D4CCE9 /* simple-pqueue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "simple-pqueue.h"; sourceTree = "<group>"; };
+		4203FDA32A0D251C00D4CCE9 /* simple-pqueue.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "simple-pqueue.m"; sourceTree = "<group>"; };
 		42DC45812A0C81650098D8A5 /* Cell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Cell.h; sourceTree = "<group>"; };
 		42DC45842A0C828B0098D8A5 /* EmptyCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmptyCell.h; sourceTree = "<group>"; };
 		42DC45852A0C828B0098D8A5 /* EmptyCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmptyCell.m; sourceTree = "<group>"; };
@@ -41,6 +45,8 @@
 		42DC45922A0C962A0098D8A5 /* Spreadsheet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Spreadsheet.h; sourceTree = "<group>"; };
 		42DC45932A0C962A0098D8A5 /* Spreadsheet.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Spreadsheet.m; sourceTree = "<group>"; };
 		AABCC322FAEA56093C7AEC6A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AABCC55799D6A762C07D630E /* PriorityQueueNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PriorityQueueNode.m; sourceTree = "<group>"; };
+		AABCC992B22C5B143AE7A684 /* PriorityQueueNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PriorityQueueNode.h; sourceTree = "<group>"; };
 		AABCCAB361F29F904CC1EAD6 /* TextExcel-ObjC */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "TextExcel-ObjC"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -55,6 +61,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4203FDA12A0D24E500D4CCE9 /* simple-structures */ = {
+			isa = PBXGroup;
+			children = (
+				4203FDA22A0D251C00D4CCE9 /* simple-pqueue.h */,
+				4203FDA32A0D251C00D4CCE9 /* simple-pqueue.m */,
+				AABCC55799D6A762C07D630E /* PriorityQueueNode.m */,
+				AABCC992B22C5B143AE7A684 /* PriorityQueueNode.h */,
+			);
+			path = "simple-structures";
+			sourceTree = "<group>";
+		};
+		4203FDA52A0D26E600D4CCE9 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				42DC458A2A0C86DA0098D8A5 /* NSComparisonMethods.h */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
 		AABCC131AF1E51333CE7F7A9 = {
 			isa = PBXGroup;
 			children = (
@@ -67,13 +92,14 @@
 		AABCC2C23F1A24B3707FFF1E /* TextExcel-ObjC */ = {
 			isa = PBXGroup;
 			children = (
+				4203FDA52A0D26E600D4CCE9 /* utils */,
+				4203FDA12A0D24E500D4CCE9 /* simple-structures */,
 				AABCC322FAEA56093C7AEC6A /* main.m */,
 				42DC45812A0C81650098D8A5 /* Cell.h */,
 				42DC45842A0C828B0098D8A5 /* EmptyCell.h */,
 				42DC45852A0C828B0098D8A5 /* EmptyCell.m */,
 				42DC45872A0C85E20098D8A5 /* TextCell.h */,
 				42DC45882A0C85E20098D8A5 /* TextCell.m */,
-				42DC458A2A0C86DA0098D8A5 /* NSComparisonMethods.h */,
 				42DC458B2A0C886B0098D8A5 /* Grid.h */,
 				42DC458E2A0C895C0098D8A5 /* Location.h */,
 				42DC45922A0C962A0098D8A5 /* Spreadsheet.h */,
@@ -144,9 +170,11 @@
 			files = (
 				42DC45942A0C962A0098D8A5 /* Spreadsheet.m in Sources */,
 				42DC45892A0C85E20098D8A5 /* TextCell.m in Sources */,
+				4203FDA42A0D251C00D4CCE9 /* simple-pqueue.m in Sources */,
 				4203FDA02A0CB85C00D4CCE9 /* SpreadsheetLocation.m in Sources */,
 				AABCC1642BEC00372D6F6780 /* main.m in Sources */,
 				42DC45862A0C828B0098D8A5 /* EmptyCell.m in Sources */,
+				AABCC3D1DD4BA2983F1D7592 /* PriorityQueueNode.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

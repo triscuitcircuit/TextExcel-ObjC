@@ -63,7 +63,7 @@
     NSString* top = @"   |";
     NSString* bottom = @"";
     for(int i =0; i < [self getCols]; ++i){
-        top = [top stringByAppendingFormat:@"%c %8s |",(char)(start+i)," "];
+        top = [top stringByAppendingFormat:@"%c %7s |",(char)(start+i)," "];
     }
     for(int i=0; i<[self getRows]; i++){
         bottom = (i < 9)?
@@ -77,7 +77,7 @@
         bottom = [bottom stringByAppendingString:@"\n"];
     }
     NSString *combined = [top
-                          stringByAppendingFormat:@"\n %@", bottom];
+                          stringByAppendingFormat:@"\n%@", bottom];
     return combined;
 }
 
